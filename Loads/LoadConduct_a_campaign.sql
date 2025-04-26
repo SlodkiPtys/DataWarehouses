@@ -1,0 +1,1 @@
+SELECT * FROM Conduct_a_campaign;
