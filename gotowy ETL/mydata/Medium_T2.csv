@@ -1,0 +1,11 @@
+MediumID,TypeOfMedium,ad location
+51,MobileApp,Feed
+52,Website,Header
+53,VRWorld,Footer
+54,Billboard,Ambient
+55,SmartTV,Interstitial
+56,ARApp,Stream
+57,Website,Overlay
+58,Website,Stream
+59,VideoPlatform,Overlay
+60,VideoPlatform,Header
