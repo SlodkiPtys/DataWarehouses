@@ -1,0 +1,266 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9e2b7baa-48f2-41ec-abaa-1bd5ddb88332" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Views Clicks</ID>
+  <Name>Views Clicks</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2740" scrolltop="-1839" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8520" y="8520" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Views_Clicks" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Views_Clicks" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2740</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1839</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b56fda08-ac9d-411a-aa19-adce9e23bef1">
+    <DataSourceViewID>Ad Campaign2DB</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="4f561938-3796-4120-8a9b-6be66860b1c0">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="41953a4f-32bf-48e6-a3b2-b3a062cbe067">
+      <ID>View Click ID</ID>
+      <Name>View Click ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3f30b32e-03a7-4aeb-919e-ed3646242a9b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b75106cd-42a3-4ded-92f4-1fe9651c4ba8">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>ViewClick_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2bcc1234-43e6-4d1c-8b41-fb1f869b3155">
+          <AttributeID>User Key</AttributeID>
+          <Name>User Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6b843db7-7e9c-408a-8c13-ad96caa9ae0f">
+          <AttributeID>Time ID</AttributeID>
+          <Name>Time ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="285d4061-32ac-481e-8c89-91fb02528e3e">
+          <AttributeID>O Contract ID</AttributeID>
+          <Name>O Contract ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3e0935ae-c153-46f5-b4eb-e2c5a020d2c1">
+          <AttributeID>C Contract ID</AttributeID>
+          <Name>C Contract ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b92f46b5-29aa-49de-9ca7-290b49596365">
+          <AttributeID>Date ID</AttributeID>
+          <Name>Date ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1a7c86f0-3eb2-4e53-9bea-18427175b051">
+          <AttributeID>Campaign ID</AttributeID>
+          <Name>Campaign ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8d1d9929-41f4-445f-8244-26225e9f27cb">
+          <AttributeID>View Click</AttributeID>
+          <Name>View Click</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="87a2d4ab-f640-4da7-8887-07b5dd737070">
+          <AttributeID>Click Profit</AttributeID>
+          <Name>Click Profit</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="88749bfb-c652-4af4-9645-835dbbf5b06d">
+      <ID>User Key</ID>
+      <Name>User Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="52e7fcc7-27fd-4588-a243-82927c408385">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68b138c3-0786-4381-b9a1-fa8b108eaa6d">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>User_Key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8ab4d74-393c-4bde-ab16-7f65ce87a6a8">
+      <ID>Time ID</ID>
+      <Name>Time ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a911452-6a64-4847-be5a-d73f477d4f5a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5570b463-404d-4168-a7d5-e325105c2321">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>Time_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a792e109-e076-4416-a735-95245ec483af">
+      <ID>O Contract ID</ID>
+      <Name>O Contract ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4a38ad18-ad6a-4bf6-9186-fe9549ad050c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cfd0169-63bf-41de-ab5a-dcb80090aad7">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>OContract_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="967c10e7-f617-4389-a3fe-712edc8e1701">
+      <ID>C Contract ID</ID>
+      <Name>C Contract ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1bf992c7-1b86-440d-97ae-07373311bf4f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4eb2d96e-9c11-4106-8420-595cc5b8338f">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>CContract_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3456be9c-00ec-4098-a717-84a1c46dd33e">
+      <ID>Date ID</ID>
+      <Name>Date ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2129bfb7-ae89-4dc8-a40a-6bfd40c55d9f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dc38213d-c7d4-445e-bfa8-94362829cb36">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>Date_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9d52abe9-ffbe-4eb7-8c28-b9622d7fdc70">
+      <ID>Campaign ID</ID>
+      <Name>Campaign ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="62cc2e84-d5eb-4c22-95e9-616181a49583">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3a0dca44-fb3a-4387-90b6-80323e2cf7d5">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>Campaign_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6bcca41a-c6f6-4a28-a59e-6df8de3bb46e">
+      <ID>View Click</ID>
+      <Name>View Click</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d27a5818-189a-4124-ad02-3846ec8d9f98">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="76afc69b-469b-4a9c-8fd8-07c29b8686f9">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>View_Click</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a58cae20-eef6-4290-a6fa-df2513c66ea0">
+      <ID>Click Profit</ID>
+      <Name>Click Profit</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c5647724-f626-416d-b5e1-23e9c807f022">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6d8e9162-5a9c-478e-bfc6-fe17d796ebe6">
+            <TableID>dbo_Views_Clicks</TableID>
+            <ColumnID>Click_Profit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

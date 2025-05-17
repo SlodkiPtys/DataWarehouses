@@ -1,0 +1,117 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Task4corrected</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>URQusbyhs9GOom8bPuBVY6+CUno=12.05.2025 20:05:3312.05.2025 20:05:33</TimeStamp>
+        <ID>
+          <String>Ad Campaign2DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>zzMAd+ZasG/XsePIQPqnzKP71FI=15.05.2025 16:39:1112.05.2025 20:05:58</TimeStamp>
+        <ID>
+          <String>Ad Campaign2DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KKXB6Q+w7otnvOUajh22S4fTMXU=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Campaign</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>O0qsOAOH0XVL3NX+AEB6Bt6ghnw=16.05.2025 22:57:1712.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>jMOYTM0FLCacY5LHZo//JdCza94=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Owner</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>eCqTuzzYAcu3JfKn4CTLLjWB6Sg=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Client</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QacRtoDp8I6U0TiATNaxK9hmwv4=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Medium</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NmHNn8ch38ThsFgs4f8gMYuRrwQ=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Interests</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yDJB7B58PgUUEAxawrcMqFw22EE=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Views Clicks</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+8xJIynbeamj4taKUEsMqISZSbo=12.05.2025 20:08:2812.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>User</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>3BbQ82dYkcjSXZzqXpx8ez3Am7k=16.05.2025 17:50:5912.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>8P1lMhrgiPOyBqLCDcvVab584og=16.05.2025 15:53:2712.05.2025 20:06:26mG/+TbObqdXL8uutCXHLQF51phY=15.05.2025 16:39:2112.05.2025 20:06:26</TimeStamp>
+        <ID>
+          <String>Ad Campaign2DB</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>g0OyMKmJHjjTJUgcPZi7CCAdIAg=24.04.2025 13:25:0024.04.2025 13:24:59</TimeStamp>
+      <ID>
+        <String>Task4corrected</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2025-05-16T20:57:26.14Z</LastDeployed>
+</DeploymentSnapshot>

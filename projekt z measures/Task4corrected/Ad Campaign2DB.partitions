@@ -1,0 +1,85 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="579951ab-df57-4764-92f6-530a016c42d9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ad Campaign2DB</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Conduct a Campaign</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="baf283bb-3c45-4463-b777-9878e50d41e2">
+          <ID>Conduct a Campaign</ID>
+          <Name>Conduct a Campaign</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="13e53952-ab91-4964-a860-c65040e8ca8a">
+            <DataSourceViewID>Ad Campaign2DB</DataSourceViewID>
+            <TableID>dbo_Conduct_a_campaign</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Interest Log</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e764b135-f803-4ac5-9b19-959bc04a600b">
+          <ID>Interest Log</ID>
+          <Name>Interest Log</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="088490d6-3b96-4c58-a137-5857ff02a0cc">
+            <DataSourceViewID>Ad Campaign2DB</DataSourceViewID>
+            <TableID>dbo_InterestLog</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Views Clicks</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="37974678-1697-4e52-b6ec-3b445d9b8dd2">
+          <ID>Views Clicks</ID>
+          <Name>Views Clicks</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ed7d695b-c3da-494a-b656-2ed6a308e962">
+            <DataSourceViewID>Ad Campaign2DB</DataSourceViewID>
+            <TableID>dbo_Views_Clicks</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Views Clicks 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d525105b-a57e-40ee-974a-186474543af8">
+          <ID>Views Clicks</ID>
+          <Name>Views Clicks</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b70ac072-6b35-4c59-a26f-36472f8313cb">
+            <DataSourceViewID>Ad Campaign2DB</DataSourceViewID>
+            <TableID>dbo_Views_Clicks</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
