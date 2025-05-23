@@ -1,0 +1,187 @@
+--1. Compare the number of clicks received by campaigns of the same client.
+SELECT 
+  {[Measures].[Number of Clicks]} ON COLUMNS,
+  NON EMPTY 
+    ([Client].[Name and Surname].[Name and Surname] * 
+     [Campaign].[Campaign Name].[Campaign Name]) ON ROWS
+FROM [Ad Campaign2DB]
+
+--2. Identify the best-performing campaigns in the current and previous month based on engagement.
+-- *for now i changed it to best performing campaigns in years – Operating on Dimension Hierarchy
+SELECT
+  {[Measures].[Views Clicks Count]} ON COLUMNS,
+  TOPCOUNT(
+    ORDER(
+      NONEMPTY(
+        CROSSJOIN(
+          [Campaign].[Campaign Name].[Campaign Name].Members,
+          [Date].[DATE OF CLICK HIERARCHY].[Year].Members
+        ),
+        {[Measures].[Views Clicks Count]}
+      ),
+      [Measures].[Views Clicks Count],
+      DESC
+    ),
+    10,
+    [Measures].[Views Clicks Count]
+  ) ON ROWS
+FROM [Ad Campaign2DB]
+
+-- 3. Compare the profit of each owner in the current and previous month.
+-- *for now instead current and previous months are changed to year 2025 – WHERE clause, Operating on Dimension Hierarchy
+SELECT  
+  NON EMPTY { [Measures].[Profit Total] } ON COLUMNS,
+  NON EMPTY { 
+    [Owner].[Name And Surname].[Name And Surname].ALLMEMBERS 
+  } ON ROWS
+
+FROM [Ad Campaign2DB]
+
+WHERE ( [Date].[END DATE HIERARCHY].[Year].[2025] )
+
+-- 4. Compare the number of clicks with users' locations generated from different advertising platforms in the current and previous month.
+-- *medium (advertising platforms) are not connected, so I just compared all time number of clicks with locations
+SELECT
+  [Measures].[Number of Clicks] ON COLUMNS,
+  [User].[Location].Members ON ROWS
+FROM [Ad Campaign2DB]
+
+-- 5. Compare the number of ad views and clicks in relation to the target audience of the campaign.
+SELECT
+    {
+        [Measures].[Number of Views],
+        [Measures].[Number of Clicks]
+    } ON COLUMNS,
+
+    NONEMPTY(
+        [Campaign].[Target Audience].[Target Audience].MEMBERS,
+        {[Measures].[Number of Views], [Measures].[Number of Clicks]}
+    ) ON ROWS
+
+FROM [Ad Campaign2DB]
+
+-- 6. What clients have gained 20% revenue between the current and previous month.
+-- *ROI for latest month
+SELECT 
+  {
+    [Measures].[ROI]
+  } ON COLUMNS,
+
+  FILTER(
+    NONEMPTY(
+      [Client].[Name and Surname].[Name and Surname].MEMBERS,
+      [Measures].[ROI]
+    ),
+    [Measures].[ROI] >= 0.20
+  ) ON ROWS
+
+FROM [Ad Campaign2DB]
+
+WHERE
+(
+  TAIL(
+    NONEMPTY(
+      [Date].[DATE OF CLICK HIERARCHY].[Month].MEMBERS,
+      [Measures].[ROI]
+    ),
+    1
+  ).ITEM(0)
+)
+
+-- 7. What types of ads generate the highest engagement when targeted advertising is applied?
+-- *targeted advertising is always defined, also medium is not connected to views/clicks, so instead of engagement we used max profit
+SELECT
+    {[Measures].[Profit Max]} ON COLUMNS,
+
+    ORDER(
+        NONEMPTY(
+            [Medium].[Type Of Medium].[Type Of Medium].MEMBERS,
+            [Measures].[Profit Max]
+        ),
+        [Measures].[Profit Max],
+        DESC
+    ) ON ROWS
+
+FROM [Ad Campaign2DB]
+
+-- 8. Which user location generates the highest number of clicks?
+SELECT 
+    {[Measures].[Number of Clicks]} ON COLUMNS,
+
+    TOPCOUNT(
+        NONEMPTY(
+            [User].[Location].[Location].MEMBERS,
+            [Measures].[Number of Clicks]
+        ),
+        1,
+        [Measures].[Number of Clicks]
+    ) ON ROWS
+
+FROM [Ad Campaign2DB]
+
+
+-- 9. What gender of users is the most common for the chosen campaign?
+-- *for “HolidayPromo” Campaign – using TOP function to choose most common gender
+SELECT 
+    {[Measures].[Number of Users]} ON COLUMNS,
+
+    TOPCOUNT(
+        NONEMPTY(
+            [User].[Gender].[Gender].MEMBERS,
+            ([Measures].[Number of Users], [Campaign].[Campaign Name].[HolidayPromo])
+        ),
+        1,
+        ([Measures].[Number of Users], [Campaign].[Campaign Name].[HolidayPromo])
+    ) *
+    {[Campaign].[Campaign Name].[HolidayPromo]} ON ROWS
+
+FROM [Ad Campaign2DB]
+
+--10. Who is the user with the biggest number of clicks on a certain campaign?
+-- *for “BlackFriday” Campaign – WHERE clause
+SELECT
+    {[Measures].[Number of Clicks]} ON COLUMNS,
+    TOPCOUNT(
+        NONEMPTY(
+            [User].[Email].[Email].MEMBERS,
+            ([Measures].[Number of Clicks], [Campaign].[Campaign Name].[BlackFriday])
+        ),
+        1,
+        ([Measures].[Number of Clicks], [Campaign].[Campaign Name].[BlackFriday])
+    ) ON ROWS
+FROM [Ad Campaign2DB]
+WHERE ([Campaign].[Campaign Name].[BlackFriday])
+
+-- 11. What is the average target audience of all campaigns signed during one contract?
+-- *cannot have an average target audience since the target audience is not numeric, also there is no contract table
+-- **changed it into: What is the average, max and min campaign duration of campaigns – Numerical Operation
+WITH 
+MEMBER [Measures].[Avg Campaign Duration] AS
+  AVG(
+    [Campaign].[Campaign Name].Members,
+    [Measures].[Duration]
+  )
+
+MEMBER [Measures].[Max Campaign Duration] AS
+  MAX(
+    [Campaign].[Campaign Name].Members,
+    [Measures].[Duration]
+  )
+
+MEMBER [Measures].[Min Campaign Duration] AS
+  MIN(
+    [Campaign].[Campaign Name].Members,
+    [Measures].[Duration]
+  )
+
+SELECT
+  {
+    [Measures].[Avg Campaign Duration],
+    [Measures].[Max Campaign Duration],
+    [Measures].[Min Campaign Duration]
+  } ON COLUMNS
+
+FROM [Ad Campaign2DB]
+
+
+
